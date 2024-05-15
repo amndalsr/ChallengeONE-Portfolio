@@ -1,13 +1,50 @@
+:root {
+    --cor-primaria: #141724;
+    --cor-secundaria: #2c2e40;
+    --cor-secundaria-hover: #333549;
+    --cor-nav: #120c1ecb;
+    --cor-text-nav: #ffffffa2;  
+    --cor-text-nav-hover: #ffffffe6;
+    --cor-paragrafos: #ffffffaf;
+    --cor-text-destaque: linear-gradient(124deg,
+    #b875cb 8%,
+    #ed63a2 29%,
+    #e07085 50%,
+    #d64f4f 75%,
+    #ecb46e 100%);
+    --cor-titulo: #ffffff;
+    --cor-subtitulos: #ffffffdd;
+    --cor-btn-primaria: #1c2434;
+    --cor-btn-primaria-hover: #0d1016;
+    --cor-btn-secundaria: #d0d0d026;
+    --cor-btn-terciaria: #181927;
+
+    --cor-link: #ffffff;
+    --cor-link-hover: #e07085;
+    --cor-linha: #b0b0b08c;
+    --cor-icones: #ffffffc9;
+    --cor-btn-enviar: #2e3747;
+    
+    --fonte-primaria: 'Popins', sans-serif;
+    --tamamho-text: 16px;
+    --tamanho-titulo-principal: 40px;
+    --tamanho-titulo: 30px;
+    --tamanho-subtitulo: 35px;
+    --tamanho-btn: 20px;
+    --distancia-padrao: 100px;
+    --distancia-subtitulo-conteudo: 25px
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #141724;
+    background-color: var(--cor-primaria);
     background-image: url(/assets/blur-fundo.png);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Popins', sans-serif;
+    font-family: var(--fonte-primaria);
     font-weight: 100;
     height: 100vh;
 }
@@ -25,18 +62,17 @@ body {
     padding: 18px 30px 18px 30px;
     border-radius: 50px;
     z-index: 2;
-    background: #120c1ecb;
+    background: var(--cor-nav);
     /*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.226);*/
-    backdrop-filter: blur(8.4px);
+    backdrop-filter: blur(4.4px);
     -webkit-backdrop-filter: blur(8.4px);
 }
 
 .navegador ul a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.634);
-    margin-right: 40px;
+    color: var(--cor-text-nav);
+    margin-right: var(--tamanho-titulo-principal);
     font-size: 15px;
-    font-weight: 100;
 }
 
 .navegador a:last-child {
@@ -44,7 +80,7 @@ body {
 }
 
 .navegador a:hover {
-    color: rgba(255, 255, 255, 0.901);
+    color: var(--cor-text-nav-hover);
 }
 
 .inicio {
@@ -57,7 +93,7 @@ body {
 .perfil {
     width: 95px;
     margin-top: 155px;
-    box-shadow: 0 4px 30px rgba(63, 33, 77, 0.458);
+    box-shadow: 0 4px 30px rgba(95, 57, 112, 0.458);
     border-radius: 50%;
 }
 
@@ -65,7 +101,7 @@ body {
     text-align: center;
     font-size: 40px;
     font-weight: 400;
-    color: white;
+    color: var(--cor-titulo);
     line-height: 55px;
     margin-top: 30px;
     max-width: 800px;
@@ -73,12 +109,7 @@ body {
 
 .destaque {
     background: rgb(156, 85, 175);
-    background: linear-gradient(124deg,
-            rgb(184, 117, 203) 8%,
-            rgba(237, 99, 162, 1) 29%,
-            rgba(224, 112, 133, 1) 50%,
-            rgba(214, 79, 79, 1) 75%,
-            rgba(236, 180, 110, 1) 100%);
+    background: var(--cor-text-destaque);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -99,8 +130,8 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: white;
-    font-size: 20px;
+    color: var(--cor-link);
+    font-size: var(--tamanho-btn);
     font-weight: 100;
 }
 
@@ -108,11 +139,11 @@ body {
     gap: 6px;
     padding: 15px 30px;
     border-radius: 40px;
-    background-color: #1c2434;
+    background-color: var(--cor-btn-primaria);
 }
 
 .btn-download {
-    background-color: #d0d0d026;
+    background-color: var(--cor-btn-secundaria);
     gap: 6px;
     padding: 15px 30px;
     border-radius: 40px;
@@ -121,7 +152,7 @@ body {
 .btn-social {
     border-radius: 50px;
     padding: 15px 15px;
-    background-color: #d0d0d026;
+    background-color: var(--cor-btn-secundaria);
 }
 
 .botoes a:hover {
@@ -131,7 +162,7 @@ body {
 }
 
 .btn-contact:hover {
-    background-color: #0d1016;
+    background-color: var(--cor-btn-primaria-hover);
 }
 
 .botoes i {
@@ -140,8 +171,8 @@ body {
 
 .linha {
     height: 80px;
-    border-right: 4px solid rgba(176, 176, 176, 0.653);
-    margin-top: 70px;
+    border-right: 4px solid var(--cor-linha);
+    margin-top: var(--distancia-padrao);
     border-radius: 10px;
 }
 
@@ -150,23 +181,23 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
-    color: rgba(255, 255, 255, 0.866);
+    margin-top: var(--distancia-padrao);
 }
 
 .sobre h1 {
-    font-size: 35px;
-    margin-bottom: 25px;
+    font-size: var(--tamanho-subtitulo);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
+    color: var(--cor-subtitulos);
 }
 
 .sobre p {
     display: flex;
     text-align: center;
     max-width: 670px;
-    font-size: 17px;
+    font-size: var(--tamamho-text);
     line-height: 30px;
     margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.729);
+    color: var(--cor-paragrafos);
 }
 
 .projetos {
@@ -177,9 +208,9 @@ body {
 }
 
 .proj-titulo {
-    margin-top: 4em;
-    font-size: 35px;
-    color: rgba(255, 255, 255, 0.866);
+    margin-top: var(--distancia-padrao);
+    font-size: var(--tamanho-subtitulo);
+    color: var(--cor-subtitulos);
 }
 
 .container {
@@ -188,7 +219,7 @@ body {
     justify-content: space-between;
     width: 620px;
     height: 280px;
-    background-color: #2c2e40;
+    background-color: var(--cor-secundaria);
     margin-top: 35px;
     border-radius: 10px;
     padding: 45px 35px 10px 35px;
@@ -196,32 +227,32 @@ body {
 }
 
 .container:hover {
-    background-color: #333549;
+    background-color: var(--cor-secundaria-hover);
 }
 
 .container h2 {
     font-size: 25px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
-    margin-bottom: 15px;
+    color: var(--cor-subtitulos);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
 }
 
 .container p {
-    font-size: 16px;
+    font-size: var(--tamamho-text);
     max-width: 280px;
     line-height: 22px;
-    color: rgba(255, 255, 255, 0.732);
+    color: var(--cor-paragrafos);
     margin-bottom: 15px;
 }
 
 .container a {
-    font-size: 16px;
+    font-size: var(--tamamho-text);
     text-decoration: none;
-    color: white;
+    color: var(--cor-link);
 }
 
 .container a:hover {
-    color: rgb(136, 108, 156);
+    color: var(--cor-link-hover);
 }
 
 .lista-linguagens {
@@ -234,8 +265,8 @@ body {
 }
 
 .lista-linguagens li {
-    background-color: #181927;
-    color: rgba(255, 255, 255, 0.674);
+    background-color: var(--cor-btn-terciaria);
+    color: var(--cor-paragrafos);
     font-size: 12px;
     border-radius: 20px;
     padding: 8px 15px;
@@ -275,14 +306,14 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: var(--distancia-padrao);
 }
 
 .habilidades h1 {
-    font-size: 40px;
+    font-size: var(--tamanho-subtitulo);
     font-weight: 400;
-    color: white;
-    margin-top: 80px;
-    margin-bottom: 30px;
+    color: var(--cor-subtitulos);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
 }
 
 .habilidades ul {
@@ -294,12 +325,12 @@ body {
     flex-wrap: wrap;
     max-width: 700px;
     gap: 20px;
-    margin-bottom: 90px;
+    margin-bottom: var(--distancia-padrao);
 }
 
 .habilidades ul li {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.795);
+    font-size: var(--tamamho-text);
+    color: var(--cor-paragrafos);
     background-color: #2c2e40;
     border-radius: 15px;
     padding: 15px 20px;
@@ -309,9 +340,9 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-    font-size: 35px;
-    margin-bottom: 40px;
-    color: white;
+    font-size: var(--tamanho-subtitulo);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
+    color: var(--cor-subtitulos);
 }
 
 .experiencia {
@@ -321,6 +352,7 @@ body {
 .timeline {
     margin: 0 auto;
     width: 900px;
+    margin-bottom: var(--distancia-padrao);
 }
 
 .timeline ul li {
@@ -334,9 +366,9 @@ body {
 .ponto {
     min-width: 50px;
     height: 50px;
-    background-color: #141c24;
+    background-color: var(--cor-primaria);
     border-radius: 100%;
-    border: 3px #bfb3b3 solid;
+    border: 3px var(--cor-linha) solid;
     position: relative;
     left: 1px;
 }
@@ -346,7 +378,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.789);
+    color: var(--cor-icones);
     margin-top: 11px;
 }
 
@@ -378,8 +410,8 @@ body {
 }
 
 .timeline ul li .data h4 {
-    color: rgba(255, 255, 255, 0.832);
-    font-size: 18px;
+    color: var(--cor-paragrafos);
+    font-size: var(--tamamho-text);
     width: 100px;
     text-align: center;
     border-radius: 10px;
@@ -387,25 +419,25 @@ body {
 
 .timeline ul li .conteudo h3 {
     padding: 25px 20px 10px 20px;
-    background-color: #1c2434;
-    font-size: 16px;
+    background-color: var(--cor-secundaria);
+    font-size: var(--tamamho-text);
     margin-bottom: 0;
     text-align: start;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    color: rgba(255, 255, 255, 0.984);
+    color: var(--cor-subtitulos);
 }
 
 .timeline ul li .conteudo p {
     padding: 0 20px 30px 20px;
-    background-color: #1c2434;
-    font-size: 16px;
+    background-color: var(--cor-secundaria);
+    font-size: var(--tamamho-text);
     margin-top: 0;
     text-align: start;
     line-height: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    color: rgba(255, 255, 255, 0.668);
+    color: var(--cor-paragrafos);
 }
 
 .timeline ul li:nth-child(even) {
@@ -423,7 +455,7 @@ body {
     left: 50%;
     height: 700px;
     border-radius: 10px;
-    background-color: rgba(176, 176, 176, 0.764);
+    background-color: var(--cor-linha);
 }
 
 .contato {
@@ -434,16 +466,16 @@ body {
 }
 
 .contato h1 {
-    font-size: 35px;
-    color: white;
-    margin-bottom: 15px;
+    font-size: var(--tamanho-subtitulo);
+    color: var(--cor-subtitulos);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
 }
 
 .contato p {
-    font-size: 16px;
+    font-size: var(--tamamho-text);
     line-height: 22px;
-    color: rgba(255, 255, 255, 0.732);
-    margin-bottom: 40px;
+    color: var(--cor-paragrafos);
+    margin-bottom: var(--distancia-subtitulo-conteudo);
 }
 
 .form-container {
@@ -454,7 +486,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .formulario input {
@@ -462,10 +494,10 @@ body {
     width: 600px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.744);
+    background-color: #ffffffbe;
 
     color: black;
-    font-size: 16px;
+    font-size: var(--tamamho-text);
 }
 .formulario input:focus {
     background-color: white;
@@ -477,7 +509,7 @@ body {
     position: absolute;
     top: 15px;
     color: #0d101662;
-    font-size: 16px;
+    font-size: var(--tamamho-text);
 }
 
 .formulario textarea {
@@ -489,9 +521,9 @@ body {
     background-color: rgba(255, 255, 255, 0.744);
     resize: none; 
 
-    font-family: 'Popins', sans-serif;
+    font-family: var(--fonte-primaria);
     color: black;
-    font-size: 16px;
+    font-size: var(--tamamho-text);
 }
 
 .formulario textarea:focus {
@@ -501,16 +533,16 @@ body {
 }
 
 .formulario textarea::placeholder {
-    font-family: 'Popins', sans-serif;
+    font-family: var(--fonte-primaria);
     color: #0d101662;
-    font-size: 16px;
+    font-size: var(--tamamho-text);
 }
 
 .btn-enviar button{
     margin-top: 15px;
-    color: white;
-    font-size: 16px;
-    background-color: #2e3747;
+    color: var(--cor-link);
+    font-size: var(--tamamho-text);
+    background-color: var(--cor-btn-enviar);
     border: none;
     border-radius: 30px;
     padding: 10px 20px;
@@ -519,11 +551,11 @@ body {
 .rodape {
     width: 100%;
     top: 100%;
-    margin-top: 40px;
+    margin-top: var(--distancia-padrao);
     text-align: center;
     padding: 0px 0px 40px 0px;
-    color: rgba(255, 255, 255, 0.436);
-    font-size: 14px;
+    color: var(--cor-paragrafos);
+    font-size: var(--tamamho-text);
     font-weight: lighter;
     line-height: 30px;
 }
