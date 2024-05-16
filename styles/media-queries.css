@@ -1,0 +1,26 @@
+@media only screen and (max-width: 900px) {
+
+    .timeline {
+        width: 500px;
+    }
+
+    .timeline::before {
+        height: 990px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .container {
+        width: 320px;
+        height: 120px;
+    }
+    
+}
+
+@media only screen and (max-width: 375px) {
+
+
+    
+}

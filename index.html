@@ -14,6 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css ">
+    <link rel="stylesheet" href="/styles/media-queries.css">
 </head>
 
 <body>
@@ -206,23 +207,32 @@
             <h1>Entre em Contato</h1>
             <p>Se deseja entrar em contato comigo, preencha o formulário por favor.</p>
             <div class="form-container">
-                <form class="formulario">
-                    <input type="text" id="fname" name="fname" placeholder="Seu nome" spellcheck="false">
-                    <input type="email" id="lname" name="lname" placeholder="Seu email" spellcheck="false">
+                <form class="formulario" onsubmit="handleSubmit(event)">
+                    <input type="text" id="fname" name="fname" placeholder="Seu nome" spellcheck="false" required>
+                    <input type="email" id="lname" name="lname" placeholder="Seu email" spellcheck="false" required>
+                    <input type="hidden" name="_captcha" value="false">
                     <textarea id="message" name="message" placeholder="Sua mensagem" wrap="hard"
-                        spellcheck="false"></textarea>
-                </form>
-                <div class="btn-enviar">
+                        spellcheck="false" required></textarea>
                     <button type="submit" href="#">Enviar <i class='bx bx-paper-plane'></i></button>
-                </div>
+                </form>
             </div>
         </section>
+
+        <div id="customAlert" class="custom-alert" style="display:none;">
+            <div class="custom-alert-content">
+            <span class="close-btn" onclick="closeAlert()">&times;</span>
+            <p id="alertMessage">Alerta!</p>
+            </div>
+        </div>
+  
     </main>
 
     <footer class="rodape">
         <p> © 2024 Amanda Laís. Todos os direitos reservados.</p>
-        <p><b>Sobre este site:</b> Construido com HTML, CSS, JavaScript e hospedagem no Vercel.</p>
+        <p><b>Sobre este site:</b> Construído com HTML, CSS, JavaScript e hospedagem no Vercel.</p>
     </footer>
+
+    <script src="/script.js"></script>
 
 </body>
 
