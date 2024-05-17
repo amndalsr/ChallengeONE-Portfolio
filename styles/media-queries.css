@@ -1,26 +1,122 @@
-@media only screen and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navegador {
+        padding: 15px 20px;
+    }
+
+    .navegador ul a {
+        font-size: 14px;
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .botoes a {
+        font-size: 18px;
+    }
+
+    .sobre h1, .habilidades h1, .experiencia h1, .contato h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
 
     .timeline {
-        width: 500px;
+        width: 100%;
+    }
+
+    .formulario input, .formulario textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+
+    .navegador {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .navegador ul a {
+        font-size: 12px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .inicio h1 {
+        font-size: 24px;
+    }
+
+    .botoes a {
+        font-size: 16px;
+    }
+
+    .sobre h1, .habilidades h1, .experiencia h1, .contato h1 {
+        font-size: 24px;
+    }
+
+    .container img {
+        left: 10%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .timeline ul li .conteudo {
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    .timeline ul li .conteudo h3 {
+        max-width: 200px;
+    }
+
+    .timeline ul li .conteudo p {
+        max-width: 200px;
+    }
+
+    .timeline ul li:nth-child(odd) .conteudo {
+        padding-right: 0;
+    }
+
+    .timeline ul li:nth-child(even) .conteudo {
+        padding-left: 0;
     }
 
     .timeline::before {
-        height: 990px;
+        left: 14%;
     }
 
-}
-
-@media only screen and (max-width: 650px) {
-
-    .container {
-        width: 320px;
-        height: 120px;
+    .timeline ul li .data {
+        display: none; 
     }
-    
-}
 
-@media only screen and (max-width: 375px) {
+    .timeline ul li:nth-child(even) {
+        flex-direction: row-reverse;
+        padding-left: 0;
+    }
 
+    .timeline ul li:nth-child(odd) {
+        flex-direction: row-reverse;
+        padding-left: 0;
+    }
 
-    
+    .formulario input, .formulario textarea {
+        width: 100%;
+    }
 }
