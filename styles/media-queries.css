@@ -1,50 +1,12 @@
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .navegador {
-        padding: 15px 20px;
-    }
-
-    .navegador ul a {
-        font-size: 14px;
-    }
-
-    .inicio h1 {
-        font-size: 30px;
-    }
-
-    .botoes a {
-        font-size: 18px;
-    }
-
-    .sobre h1, .habilidades h1, .experiencia h1, .contato h1 {
-        font-size: 28px;
-    }
-
-    .container {
-        flex-direction: column;
-        width: auto;
-        height: auto;
-        padding: 20px;
-    }
-
-    .timeline {
-        width: 100%;
-    }
-
-    .formulario input, .formulario textarea {
-        width: 100%;
-    }
-}
-
 @media (max-width: 767px) {
     body {
+        background-image: url(/assets/blur-fundo-mobile.png);
         font-size: 12px;
     }
 
     .navegador {
-        flex-direction: column;
-        padding: 10px;
-        margin-top: 20px;
+        padding: 15px;
+        margin-top: 100px;
     }
 
     .navegador ul a {
@@ -55,30 +17,89 @@
 
     .inicio h1 {
         font-size: 24px;
+        max-width: 300px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
+    .destaque {
+        background: rgb(156, 85, 175);
+        background: var(--cor-text-destaque2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .botoes:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botoes {
+        gap: 5px;
+    }
+
+    .btn-contact, .btn-download, .btn-social {
+        padding: 5px 10px;
     }
 
     .botoes a {
         font-size: 16px;
     }
 
-    .sobre h1, .habilidades h1, .experiencia h1, .contato h1 {
+    .sobre h1, .habilidades h1, .proj-titulo, .experiencia h1, .contato h1 {
         font-size: 24px;
     }
 
-    .container img {
-        left: 10%;
+    .sobre p {
+        max-width: 300px;
     }
 
     .container {
         flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 20px;
+        width: 240px;
+        height: 300px;
+        padding: 30px 10px 10px 25px;
+    }
+
+    .container p {
+        display: none;
+    }
+
+    .container img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: initial;
+        width: 350px;
+        margin-left: 0;
         margin-top: 20px;
     }
 
+    .container:nth-child(3) {
+        flex-direction: column;
+    }
+    
+    .container:nth-child(3) img {
+        left: auto;
+        margin-right: 55%;
+    
+    }
+
+    .habilidades ul {
+        gap: 10px;
+        max-width: 300px;
+    }
+
+    .habilidades ul li {
+        font-size: 14px;
+    }
+
     .timeline ul li .conteudo {
-        width: 90%;
+        width: 75%;
         margin-left: 10px;
     }
 
@@ -99,7 +120,7 @@
     }
 
     .timeline::before {
-        left: 14%;
+        display: none;
     }
 
     .timeline ul li .data {
@@ -115,8 +136,20 @@
         flex-direction: row-reverse;
         padding-left: 0;
     }
-
-    .formulario input, .formulario textarea {
-        width: 100%;
+    
+    .contato p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-width: 300px;
     }
+
+    .formulario input, .formulario textarea{
+        width: 300px;
+    }
+
+    .rodape {
+        max-width: 300px;
+    }
+
 }
