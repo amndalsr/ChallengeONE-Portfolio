@@ -1,30 +1,42 @@
-function showAlert(message) {
-    document.getElementById('alertMessage').innerText = message;
-    document.getElementById('customAlert').style.display = 'flex';
-  }
-  
-  function closeAlert() {
-    document.getElementById('customAlert').style.display = 'none'; 
-  }
-  
-  function handleSubmit(event) {
-    event.preventDefault(); 
-    showAlert('Processando o envio do formulário...');
-  
-    var formData = new FormData(event.target);
+document.addEventListener('DOMContentLoaded', function() {
+  const ancoras = document.querySelectorAll('.navegador_ancoras a');
 
-    fetch('https://formsubmit.co/lais301m@gmail.com', {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => {
+  ancoras.forEach(ancora => {
+      ancora.addEventListener('click', function(event) {
+          ancoras.forEach(a => a.classList.remove('ativa'));
+
+          this.classList.add('ativa');
+      });
+  });
+});
+
+function showAlert(message) {
+  document.getElementById("alertMessage").innerText = message;
+  document.getElementById("customAlert").style.display = "flex";
+}
+
+function closeAlert() {
+  document.getElementById("customAlert").style.display = "none";
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  showAlert("Processando o envio do formulário...");
+
+  var formData = new FormData(event.target);
+
+  fetch("https://formsubmit.co/lais301m@gmail.com", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => {
       if (response.ok) {
-        showAlert('Formulário enviado com sucesso!');
+        showAlert("Formulário enviado com sucesso!");
       } else {
-        throw new Error('Falha ao enviar o formulário');
+        throw new Error("Falha ao enviar o formulário");
       }
     })
-    .catch(error => {
-      showAlert('Erro: ' + error.message);
+    .catch((error) => {
+      showAlert("Erro: " + error.message);
     });
-  }
+}
