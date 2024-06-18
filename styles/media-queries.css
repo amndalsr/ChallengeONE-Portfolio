@@ -4,15 +4,12 @@
         font-size: 12px;
     }
 
-    .navegador {
-        padding: 15px;
+    .navegador_ancoras {
         margin-top: 100px;
     }
 
-    .navegador ul a {
+    .navegador_ancoras li {
         font-size: 12px;
-        margin-right: 0;
-        margin-bottom: 10px;
     }
 
     .inicio h1 {
