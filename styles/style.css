@@ -75,7 +75,6 @@ body {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    gap: 15px;
     margin-top: 100px;
     padding: 20px 10px;
     border-radius: 50px;
@@ -518,7 +517,7 @@ body {
     position: absolute;
     width: 4px;
     left: 50%;
-    height: 700px;
+    height: 950px;
     border-radius: 10px;
     background-color: var(--cor-linha);
 }
