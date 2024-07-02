@@ -2,7 +2,7 @@
 
 ## Portfólio - Desafio #2
 
-☁️ Deploy: <a href="#">Amanda Laís | Portfolio</a>
+☁️ Deploy: <a href="https://amnda-lais-portfolio.vercel.app">Amanda Laís | Portfolio</a>
 
 ### 🚀 Sobre o Desafio
 
