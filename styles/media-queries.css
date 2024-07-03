@@ -4,6 +4,10 @@
     font-size: 12px;
   }
 
+  .cabecalho {
+    display: none;
+  }
+
   .navegador_ancoras {
     margin-top: 100px;
   }
