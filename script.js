@@ -1,31 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const ancoras = document.querySelectorAll('.navegador_ancoras a');
-  const sections = document.querySelectorAll('section');
+document.addEventListener("DOMContentLoaded", function () {
+  const ancoras = document.querySelectorAll(".navegador_ancoras a");
+  const sections = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const id = entry.target.getAttribute('id');
-      const navItem = document.querySelector(`.navegador_ancoras a[href="#${id}"]`);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        const navItem = document.querySelector(
+          `.navegador_ancoras a[href="#${id}"]`
+        );
 
-      if (entry.isIntersecting) {
-        ancoras.forEach(a => a.classList.remove('ativa'));
-        navItem.classList.add('ativa');
-      }
-    });
-  }, { threshold: 0.7 });
+        if (entry.isIntersecting) {
+          ancoras.forEach((a) => a.classList.remove("ativa"));
+          navItem.classList.add("ativa");
+        }
+      });
+    },
+    { threshold: 0.7 }
+  );
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     observer.observe(section);
   });
 
-  ancoras.forEach(ancora => {
-    ancora.addEventListener('click', function(event) {
-      ancoras.forEach(a => a.classList.remove('ativa'));
-      this.classList.add('ativa');
+  ancoras.forEach((ancora) => {
+    ancora.addEventListener("click", function (event) {
+      ancoras.forEach((a) => a.classList.remove("ativa"));
+      this.classList.add("ativa");
     });
   });
 });
-
 
 function showAlert(message) {
   document.getElementById("alertMessage").innerText = message;
